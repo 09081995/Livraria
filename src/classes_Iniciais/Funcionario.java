@@ -20,11 +20,21 @@ public class Funcionario extends Pessoa{
 	public String getSenha() {
 		return senhaFuncionario;
 	}
-        
-        public String toString(){
-            return super.toString()+" "+endereco+" "+senhaFuncionario;
-        }
 	
-	
+	@Override
+	public String toString() {
+		return "Funcionario [endereco=" + endereco + ", senhaFuncionario=" + senhaFuncionario + "]";
+	}
+
+
+	public boolean equals(Funcionario funci){
+		boolean resultado = false;
+		if(funci != null && this.endereco.equals(funci.getEndereco()) && this.senhaFuncionario.equals(funci.getSenha())){
+			resultado = true;
+		}
+		return resultado;
+	}
+
+
 
 }

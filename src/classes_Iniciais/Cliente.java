@@ -20,8 +20,9 @@ public class Cliente extends Pessoa{
 		return senhaCliente;
 	}
 
-	public String toString(){
-		return super.toString()+" "+endereco+" "+senhaCliente;
+	@Override
+	public String toString() {
+		return "Cliente [endereco=" + endereco + ", senhaCliente=" + senhaCliente + "]";
 	}
 
 	public boolean equals(Cliente cliente){

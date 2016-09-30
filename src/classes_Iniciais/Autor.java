@@ -22,12 +22,13 @@ public class Autor {
 	public char getSexoAutor() {
 		return sexoAutor;
 	}
-        
-    public String toString(){
-        return nomeAutor+" "+idadeAutor+" "+sexoAutor;
-    }
-    
-    public boolean equals(Autor autor){
+            
+    @Override
+	public String toString() {
+		return "Autor [nomeAutor=" + nomeAutor + ", idadeAutor=" + idadeAutor + ", sexoAutor=" + sexoAutor + "]";
+	}
+
+	public boolean equals(Autor autor){
     boolean resultado = false;	
     	if(this.nomeAutor.equals(autor.getNomeAutor()) && this.idadeAutor == autor.getIdadeAutor() && this.sexoAutor == autor.getSexoAutor()){
     		resultado = true;

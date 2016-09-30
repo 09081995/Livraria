@@ -7,7 +7,7 @@ public class Endereco {
 	private String numero;
 	private String bairro;
 	private String cidade;
-	
+
 	public Endereco(String rua, double cep, String numero, String bairro, String cidade){
 		this.rua = rua;
 		this.cep = cep;
@@ -35,8 +35,18 @@ public class Endereco {
 	public String getCidade() {
 		return cidade;
 	}
+	
+	@Override
+	public String toString() {
+		return "Endereco [rua=" + rua + ", cep=" + cep + ", numero=" + numero + ", bairro=" + bairro + ", cidade="
+				+ cidade + "]";
+	}
 
-	public String toString(){
-            return rua+" "+cep+" "+numero+" "+bairro+" "+cidade;
-        }
+	public boolean equals(Endereco endereco){
+		boolean resultado = false;
+		if(endereco != null &&this.rua.equals(endereco.getRua()) && this.cep == endereco.getCep() && this.numero.equals(endereco.getNumero()) && this.bairro.equals(endereco.getBairro()) && this.cidade.equals(endereco.getCidade())){
+			resultado = true;
+		}
+		return resultado;
+	}
 }
