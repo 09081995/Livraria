@@ -23,8 +23,18 @@ public class Autor {
 		return sexoAutor;
 	}
         
-        public String toString(){
-            return nomeAutor+" "+idadeAutor+" "+sexoAutor;
-        }
+    public String toString(){
+        return nomeAutor+" "+idadeAutor+" "+sexoAutor;
+    }
+    
+    public boolean equals(Autor autor){
+    boolean resultado = false;	
+    	if(this.nomeAutor.equals(autor.getNomeAutor()) && this.idadeAutor == autor.getIdadeAutor() && this.sexoAutor == autor.getSexoAutor()){
+    		resultado = true;
+    	}
+    	return resultado;
+    }
+        
+        
         
 }
