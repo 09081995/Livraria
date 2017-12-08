@@ -1,7 +1,7 @@
 package classes_Iniciais;
 
 public class Dono {
-	
+
 	private String NomeDoMsr;
 
 	public String getNomeDoMsr() {
@@ -36,12 +36,7 @@ public class Dono {
 			return false;
 		return true;
 	}
-	
- // System.out.println("caralhooo");
+
+	// System.out.println("caralhooo");
 
 }
-	
-	
-	
-	
-
